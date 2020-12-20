@@ -1,11 +1,7 @@
 package learn_selenium.selenium;
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.io.File;
 import java.io.IOException;
 
 
@@ -13,13 +9,16 @@ import java.io.IOException;
  * Hello world!
  *
  */
-public class App 
+public class App
 {
+    private static String user_name="10_i_am_groot_01";
+    private static String password = "oncloud9";
+    private static String url = "https://www.instagram.com/ishmam_oishi/";
     public static void main( String[] args ) throws IOException {
         WebDriver driver = new ChromeDriver();
-        driver.get("http://www.example.com");
-        File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(scrFile, new File("./image.png"));
-        driver.quit();
+        //Navigate to insta//
+        driver.get(url);
+        //login with user name and pass
+
     }
 }
